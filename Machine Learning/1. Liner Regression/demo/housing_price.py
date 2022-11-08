@@ -55,8 +55,8 @@ mse=mean_squared_error(preds,target)   #使用均方误差来评价模型好坏�
 plot.figure(figsize=(10,7))       #画布大小
 num=100
 x=np.arange(1,num+1)              #取100个点进行比较
-plot.plot(x,target[:num],label='target')      #目标取值
-plot.plot(x,preds[:num],label='preds')        #预测取值
+plot.plot(x,target[:num].values.flatten(),label='target')      #目标取值
+plot.plot(x,preds[:num].flatten(),label='preds')        #预测取值
 plot.legend(loc='upper right')  #线条显示位置
 plot.show()
 
